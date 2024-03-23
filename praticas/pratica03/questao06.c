@@ -4,24 +4,30 @@
 #include <math.h>
 
 int main() {
-    float a, b, c, delta, raiz1, raiz2;
+    double a, b, c, delta, raiz1, raiz2;
 
     printf("Digite o valor de a: ");
-    scanf("%f", &a);
+    scanf("%lf", &a);
 
     printf("Digite o valor de b: ");
-    scanf("%f", &b);
+    scanf("%lf", &b);
 
     printf("Digite o valor de c: ");
-    scanf("%f", &c);
+    scanf("%lf", &c);
 
     delta = pow(b, 2) - 4 * a * c;
 
-    raiz1 = (- b + sqrt(delta)) / (2 * a);
-    raiz2 = (- b - sqrt(delta)) / (2 * a);
-
-    printf("Raiz 1: %.2f\n", raiz1);
-    printf("Raiz 2: %.2f\n", raiz2);
+    if (delta > 0) {
+        raiz1 = (-b + sqrt(delta)) / (2 * a);
+        raiz2 = (-b - sqrt(delta)) / (2 * a);
+        printf("Raiz 1: %.2lf\n", raiz1);
+        printf("Raiz 2: %.2lf\n", raiz2);
+    } else if (delta == 0) {
+        raiz1 = -b / (2 * a);
+        printf("Raiz única: %.2lf\n", raiz1);
+    } else {
+        printf("Não existem raízes reais.\n");
+    }
 
     return 0;
 }
