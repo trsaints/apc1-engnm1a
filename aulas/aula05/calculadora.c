@@ -16,8 +16,15 @@ int main() {
     float soma = primeiro_numero + segundo_numero,
         subtracao = primeiro_numero - segundo_numero,
         produto = primeiro_numero * segundo_numero,
-        divisao = (primeiro_numero / segundo_numero) * 1.0f;
-    
+        divisao;
+
+    if (segundo_numero != 0)
+        divisao = primeiro_numero / segundo_numero;
+     else {
+        printf("Erro: Divisão por zero\n");
+        return 1;
+    }
+
     int resto_divisao = primeiro_numero % segundo_numero;
 
     double primeira_raiz = sqrt(primeiro_numero),
