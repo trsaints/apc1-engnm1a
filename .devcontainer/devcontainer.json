@@ -1,0 +1,18 @@
+{
+    // Name this configuration
+    "name": "Codespace for Skills!",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.fontSize": 18,
+                "editor.fontFamily": "JetBrains Mono",
+                "editor.fontLigatures": true
+            },
+            "extensions": [
+                "GitHub.copilot",
+                "dracula-theme.theme-dracula",
+                "ms-vscode.cpptools-extension-pack"
+            ]
+        }
+    }
+}
