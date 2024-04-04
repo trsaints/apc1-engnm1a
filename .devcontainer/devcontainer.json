@@ -11,7 +11,8 @@
             "extensions": [
                 "GitHub.copilot",
                 "dracula-theme.theme-dracula",
-                "ms-vscode.cpptools-extension-pack"
+                "ms-vscode.cpptools-extension-pack",
+                "eamodio.gitlens"
             ]
         }
     }
