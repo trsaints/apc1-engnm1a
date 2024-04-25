@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int numero;
+
+    printf("Insira um número: ");
+    int tentativa_scan = scanf("%d", &numero);
+
+    int numero_impar = numero % 2 == 0;
+    float resto = fmodf(1.5f, 2);
+
+    if (tentativa_scan != 1) {
+        printf("Erro: não foi possível ler o número.\n");
+
+        return 1;
+    }
+
+    if (numero_impar)
+        printf("O número %d é par.\n", numero);
+    else
+        printf("O número %d é ímpar.\n", numero);
+
+    return 0;
+}
